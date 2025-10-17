@@ -1,7 +1,7 @@
 package com.example.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.roy.shardingDemo.entity.UserCourseInfo;
+import com.example.entity.UserCourseInfo;
 import org.apache.ibatis.annotations.Select;
 
 import java.util.List;

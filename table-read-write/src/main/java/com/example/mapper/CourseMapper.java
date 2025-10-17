@@ -1,7 +1,7 @@
 package com.example.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.roy.shardingDemo.entity.Course;
+import com.example.entity.Course;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
