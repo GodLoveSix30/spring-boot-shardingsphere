@@ -1,53 +1,78 @@
 package com.example.entity;
 
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
-
-import java.util.Date;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 
 /**
- * @author qingshun.meng
- * @ClassName User
- * @description: TODO
- * @date 2025年10月02日
- * @version: 1.0
- */
-@Data
+ * @author ：楼兰
+ * @description: 用户表，主要测试加密算法，绑定表
+ **/
+@TableName("user")
 public class User {
-    /**
-     * 主键
-     */
-    private Long id;
-
-    /**
-     * 姓名
-     */
-    private String name;
-
-    /**
-     * 性别
-     */
+    private String userid;
+    private String username;
+    private String password;
+    private String userstatus;
+    private int age;
     private String sex;
 
-    /**
-     * 年龄
-     */
-    private Integer age;
+    @Override
+    public String toString() {
+        return "User{" +
+                "userid='" + userid + '\'' +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", userstatus='" + userstatus + '\'' +
+                ", age=" + age +
+                ", sex='" + sex + '\'' +
+                '}';
+    }
 
-    /**
-     *
-     */
-    private Date createTime;
+    public String getUserid() {
+        return userid;
+    }
 
-    /**
-     *
-     */
-    private Date updateTime;
+    public void setUserid(String userid) {
+        this.userid = userid;
+    }
 
-    /**
-     * 是否删除 1删除 0未删除
-     */
-    private Integer status;
+    public String getUsername() {
+        return username;
+    }
 
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getUserstatus() {
+        return userstatus;
+    }
+
+    public void setUserstatus(String userstatus) {
+        this.userstatus = userstatus;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
 }
